@@ -1,0 +1,20 @@
+//mulai permainan
+main_lagi = true;
+do{
+    alert("Permainan Tebak Angka");
+    //Generate Angka Random 1- 100
+    angkarandom = Math.random() * 100 + 1;
+    angkarandom = Math.floor(angkarandom)
+    console.log("angka random = " +angkarandom);
+    do{
+        tebak = prompt("Permainan dimulai, masukkan angka tebakan antara 1 - 100");
+            if(tebak<angkarandom){
+            alert(tebak + " Tebakan terlalu kecil, coba masukkan angka yang lebih besar");
+           }else if(tebak>angkarandom){
+            alert(tebak + " Tebakan terlalu besar, coba masukkan angka yang lebih kecil");
+           }
+    }while(tebak != angkarandom);
+    alert("PAS BANGET Tebakan kamu " + tebak);
+    main_lagi = confirm("Mau main lagi?");
+}while(main_lagi == true)
+alert("Makasih ya udah nyobain!")
